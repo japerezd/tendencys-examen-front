@@ -2,15 +2,15 @@
 
 This project was done in React
 
-Some evidences of the test:
+## Some evidences of the test:
 
-## Main Page
+### Main Page
 ![examen1](/examen1.PNG)
 
-## Validating form
+### Validating form
 ![examen2](/examen2.PNG)
 
-## Buying products
+### Buying products
 ![examen3](/examen3.PNG)
 
 
