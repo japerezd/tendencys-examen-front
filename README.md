@@ -1,3 +1,19 @@
+# Examen frontend Tendencys
+
+This project was done in React
+
+Some evidences of the test:
+
+## Main Page
+![examen1](/examen1.PNG)
+
+## Validating form
+![examen2](/examen2.PNG)
+
+## Buying products
+![examen3](/examen3.PNG)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
