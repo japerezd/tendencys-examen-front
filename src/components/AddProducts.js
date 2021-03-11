@@ -24,7 +24,50 @@ export default function AddProducts({idToForm}) {
     };
 
     addProduct(idToForm, newProduct);
+    cleanClasses();
     reset();
+  }
+
+  function cleanClasses(){
+      const input = document.querySelectorAll('input');
+      input.forEach(i => {
+          i.classList.remove('is-valid')
+      })
+  }
+
+  function validateForm(){
+      const inputSku = document.querySelector('#inputSku');
+      const inputName = document.querySelector('#inputName');
+      const inputQuantity = document.querySelector('#inputQuantity');
+      const inputPrice = document.querySelector('#inputPrice');
+
+      if(inputSku.value === '' ){
+        inputSku.classList.add('is-invalid')
+      }else{
+        inputSku.classList.remove('is-invalid')
+        inputSku.classList.add('is-valid')
+      }
+
+      if(inputName.value === '' ){
+        inputName.classList.add('is-invalid')
+      }else{
+        inputName.classList.remove('is-invalid')
+        inputName.classList.add('is-valid')
+      }
+
+      if(inputQuantity.value === '' ){
+        inputQuantity.classList.add('is-invalid')
+      }else{
+        inputQuantity.classList.remove('is-invalid')
+        inputQuantity.classList.add('is-valid')
+      }
+
+      if(inputPrice.value === '' ){
+        inputPrice.classList.add('is-invalid')
+      }else{
+        inputPrice.classList.remove('is-invalid')
+        inputPrice.classList.add('is-valid')
+      }
   }
 
   function addProduct(orderNumber, newProduct) {
@@ -111,7 +154,7 @@ export default function AddProducts({idToForm}) {
         >
           Close
         </button>
-        <button className='btn btn-primary' type='submit'>
+        <button className='btn btn-primary' type='submit' onClick={validateForm}>
           Add
         </button>
 

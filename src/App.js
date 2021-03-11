@@ -33,6 +33,8 @@ function App() {
 
       <Orders orders={orders} setIdToForm={setIdToForm}/>
 
+      <button className="btn btn-success">Purchase</button>
+
       <Modal idToForm={idToForm}/>
     </div>
   );
