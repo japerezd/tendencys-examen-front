@@ -13,5 +13,10 @@ code {
 }
 
 .container-fluid{
-  /* background-color: mistyrose; */
+  display: flex;
+  flex-direction: column;
+}
+.btn-lg{
+  margin-top: 1rem;
+  align-self: center;
 }

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Swal from 'sweetalert2';
 import Orders from './components/Orders';
 import Modal from './components/ui/Modal';
 
@@ -10,7 +11,6 @@ function App() {
   const [orders, setOrders] = React.useState([]);
 
   const [idToForm, setIdToForm] = React.useState('');
-  
 
   React.useEffect(() => {
     async function fetchData() {
@@ -31,11 +31,22 @@ function App() {
         <h2>Orders</h2>
       </nav>
 
-      <Orders orders={orders} setIdToForm={setIdToForm}/>
+      <Orders orders={orders} setIdToForm={setIdToForm} />
 
-      <button className="btn btn-success">Purchase</button>
+      <button
+        className='btn btn-success btn-lg'
+        onClick={() => {
+          Swal.fire(
+            'Successful purchase!',
+            'You purchased the products',
+            'success'
+          );
+        }}
+      >
+        Buy
+      </button>
 
-      <Modal idToForm={idToForm}/>
+      <Modal idToForm={idToForm} />
     </div>
   );
 }
